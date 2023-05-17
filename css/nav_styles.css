@@ -1,0 +1,118 @@
+/* Barre de nav mobile*/
+
+.navbar{
+    margin: 10px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    left: 0;
+    right: 0;
+    position: fixed;
+    z-index: 1000;
+}
+.navbar input, .nav-menu, .dropdown{
+    display: none;
+    list-style-type: none;
+}
+.Logo{
+    position: absolute;
+    left: 50%;
+    top: 12%;
+    transform: translate(-50%);
+}
+.dropdown li a {
+    top: 0;
+    color: white;
+}
+.nav-item{
+    height: 50px;
+    margin-top: 10px;
+}
+ul.dropdown {
+    background-color: rgba(0,0,0,0.8);
+}
+.dropdown{
+    margin-top: 15px;
+    border-style: outset;
+    width: 100px;
+}
+.icon{
+    fill: white;
+    cursor: pointer;
+}
+[id^=btn]:checked + ul{
+    display: block;
+}
+.nav-menu{
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 60px;
+    border-radius: 10px;
+    left: 0;
+    right: 0;
+}
+.nav-item a, .drop-item, .show{
+    color: white;
+    text-decoration: none;
+    line-height: 40px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.nav-menu a:hover, .show:hover{
+    color: rgba(0, 255, 85, 0.8);
+}
+
+/* Barre de nav Grand écran */
+
+@media screen and (min-width: 780px) {
+    
+    .navbar{
+         height: 40px;
+         position: fixed;
+         z-index: 1000;
+    }
+    .icon{
+        display: none;
+    }
+    .nav-menu{
+        display: initial;
+        position: static;
+        background-color: rgba(0, 0, 0, 0);
+        top: 0;
+    }
+    .nav-item{
+        display: inline-block;
+        position: relative;
+    }
+    .dropdown{
+        margin-top: 10px;
+        width: 100px;
+        right: 0;
+        position: absolute;
+        width: 54px;
+        text-align: center;
+    }
+    .dropdown li{
+        margin-left: -40px;
+        border-bottom: 3px solid #ccc;
+    }
+    .navbar li:hover {
+        border-top: 3px solid rgba(0, 255, 85, 0.8);
+        margin-top: -3px;
+        background-color: RGBa(000, 112, 192, 0.15);
+    }
+    nav li:hover .dropdown {
+        margin-top: 50px;
+        width: max-content;
+        display: inline-block;
+        position: absolute;
+        border-style: outset;
+        text-align: center;
+    }
+    .nav-menu a, .show{
+        padding: 5px;
+    }
+}
